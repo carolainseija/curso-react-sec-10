@@ -48,7 +48,7 @@ const Login = (props) => {
             emailIsValid === false ? classes.invalid : ''
           }`}
         >
-          <label htmlFor="email">E-Mail</label>
+          <label htmlFor="email">Email</label>
           <input
             type="email"
             id="email"
@@ -62,7 +62,7 @@ const Login = (props) => {
             passwordIsValid === false ? classes.invalid : ''
           }`}
         >
-          <label htmlFor="password">Password</label>
+          <label htmlFor="password">Contraseña</label>
           <input
             type="password"
             id="password"

@@ -8,7 +8,7 @@ const Navigation = (props) => {
       <ul>
         {props.isLoggedIn && (
           <li>
-            <a href="/">Users</a>
+            <a href="/">Usuario</a>
           </li>
         )}
         {props.isLoggedIn && (
@@ -18,7 +18,7 @@ const Navigation = (props) => {
         )}
         {props.isLoggedIn && (
           <li>
-            <button onClick={props.onLogout}>Logout</button>
+            <button onClick={props.onLogout}>cerrar sesión</button>
           </li>
         )}
       </ul>
