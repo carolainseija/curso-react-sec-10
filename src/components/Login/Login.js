@@ -28,17 +28,10 @@ const passwordReducer = (state, action) => {
 }
 
 const Login = (props) => {
-  // con estados, useState()
-  // const [enteredEmail, setEnteredEmail] = useState('');
-  // const [emailIsValid, setEmailIsValid] = useState(); 
-  // const [enteredPassword, setEnteredPassword] = useState('');
-  // const [passwordIsValid, setPasswordIsValid] = useState();
+
   const [formIsValid, setFormIsValid] = useState(false);
 
-  //REDUCER(), parametros, que van en cada uno 
-  //1- funcion inical que se ejecuta 
-  //2 - estado inical
-  //03- Una funcion para establecer el estado inicial.
+
 
   const [emailState, dispatchEmail] = useReducer(emailReducer, {
     value: '',
@@ -64,17 +57,6 @@ const Login = (props) => {
     }
   }, [emailState, passwordState ])
 
-  // useEffect(() => {
-  //   console.log("chekiando vabgngbliHGJJGGdaFFDHciónNNN..")
-  //   setTimeout(() => {
-  //     setFormIsValid(
-  //       enteredEmail.includes('@') && enteredPassword.trim().length > 6
-  //     );
-  //   }, 500)
-  //   return () => {
-  //     console.log("Clenaup")
-  //   };
-  // }, [enteredEmail, enteredPassword]);
 
   const emailChangeHandler = (event) => {
     dispatchEmail({ type: 'USER_INPUT', val: event.target.value })
