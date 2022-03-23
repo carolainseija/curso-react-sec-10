@@ -50,12 +50,19 @@ const Login = (props) => {
     isValid: null,
   })
 
-  useEffect(() => {
-    console.log('EFFECT RUNNIG');
-    return () => {
-      console.log('EFFECT CLEANUP')
+  const { isValid: emailIsValid } = emailState;
+  const { isValid: passwordIsValid } = passwordState;
+
+  useEffect(()=> {
+    const identifier = setTimeout(()=> {
+      console.log('Checking form validaty"');
+      setFormIsValid(emailState.isValid && passwordState.isValid )
+    }, 500);
+    return ()=> {
+      console.log('CLEANUP');
+      clearTimeout(identifier);
     }
-  })
+  }, [emailState, passwordState ])
 
   // useEffect(() => {
   //   console.log("chekiando vabgngbliHGJJGGdaFFDHciónNNN..")
